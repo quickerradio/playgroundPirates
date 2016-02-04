@@ -22,14 +22,14 @@ public class EventRepo {
     }
 
     public Collection<EVENT_LIST> getAll() {
-        List<EVENT_LIST> event = new ArrayList<>();
+        List<EVENT_LIST> eventLists = new ArrayList<>();
 		
 		//hendel: pulls listing of the first 6 upcoming events, 
 		// 	for the events page, timeline
         template.query(
             "SELECT * FROM jwolski.EVENT_LIST",
             (rs) -> {
-                events.add(new EVENT_LIST(
+                eventLists.add(new EVENT_LIST(
                         rs.getLong("EVENT_NAME"),
                         rs.getString("EVENT_DATE"),
                         rs.getString("EVENT_LOCATION"),
@@ -45,6 +45,6 @@ public class EventRepo {
             }
         );
 
-        return EVENTS_LIST;
+        return eventLists;
     }
 }
