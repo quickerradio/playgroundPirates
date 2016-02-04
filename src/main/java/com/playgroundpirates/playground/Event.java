@@ -1,14 +1,14 @@
 package com.playgroundpirates.playground;
 
 import java.awt.*;
-import java.util.Date;
+import java.time.OffsetDateTime;
 
 public class Event {
 
     public final long id;
     public final String name;
-    public final Date start;
-    public final Date end;
+    public final OffsetDateTime start;
+    public final OffsetDateTime end;
     public final String status;
     public final String location;
     public final int maxPerson;
@@ -35,8 +35,8 @@ public class Event {
 
         private long id;
         private String name;
-        private Date start;
-        private Date end;
+        private OffsetDateTime start;
+        private OffsetDateTime end;
         private String status;
         private String location;
         private int maxPerson;
@@ -63,20 +63,20 @@ public class Event {
             return this;
         }
 
-        public Date getStart() {
+        public OffsetDateTime getStart() {
             return start;
         }
 
-        public Builder withStart(Date start) {
+        public Builder withStart(OffsetDateTime start) {
             this.start = start;
             return this;
         }
 
-        public Date getEnd() {
+        public OffsetDateTime getEnd() {
             return end;
         }
 
-        public Builder withEnd(Date end) {
+        public Builder withEnd(OffsetDateTime end) {
             this.end = end;
             return this;
         }
