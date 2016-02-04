@@ -1,25 +1,15 @@
 package com.playgroundpirates.playground;
 
-import sun.util.calendar.LocalGregorianCalendar;
-
 import java.awt.*;
 import java.util.Date;
 
-/**
- * Created by hackathon on 2/4/2016.
- */
 public class Event {
 
     public final long id;
     public final String name;
     public final Date start;
     public final Date end;
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    private String status;
+    public final String status;
     public final String location;
     public final int maxPerson;
     public final String host;
@@ -27,65 +17,136 @@ public class Event {
     public final String desc;
     public final Image photo;
 
-    public Event(long id, String name, Date start, Date end
-            , String status, String location, int maxPerson,
-                 String host, String category, String desc, Image photo) {
-        this.id = id;
-        this.name = name;
-        this.start = start;
-        this.end = end;
-        this.status = status;
-        this.location = location;
-        this.maxPerson = maxPerson;
-        this.host = host;
-        this.category = category;
-        this.desc = desc;
-        this.photo = photo;
+    private Event(Builder builder) {
+        id = builder.id;
+        name = builder.name;
+        start = builder.start;
+        end = builder.end;
+        status = builder.status;
+        location = builder.location;
+        maxPerson = builder.maxPerson;
+        host = builder.host;
+        category = builder.category;
+        desc = builder.desc;
+        photo = builder.photo;
     }
 
-    public long getId() {
-        return id;
-    }
+    public static class Builder {
 
-    public String getName() {
-        return name;
-    }
+        private long id;
+        private String name;
+        private Date start;
+        private Date end;
+        private String status;
+        private String location;
+        private int maxPerson;
+        private String host;
+        private String category;
+        private String desc;
+        private Image photo;
 
-    public Date getStart() {
-        return start;
-    }
+        public long getId() {
+            return id;
+        }
 
-    public Date getEnd() {
-        return end;
-    }
+        public Builder withId(long id) {
+            this.id = id;
+            return this;
+        }
 
-    public String getStatus() {
-        return status;
-    }
+        public String getName() {
+            return name;
+        }
 
-    public String getLocation() {
-        return location;
-    }
+        public Builder withName(String name) {
+            this.name = name;
+            return this;
+        }
 
-    public int getMaxPerson() {
-        return maxPerson;
-    }
+        public Date getStart() {
+            return start;
+        }
 
-    public String getHost() {
-        return host;
-    }
+        public Builder withStart(Date start) {
+            this.start = start;
+            return this;
+        }
 
-    public String getCategory() {
-        return category;
-    }
+        public Date getEnd() {
+            return end;
+        }
 
-    public String getDesc() {
-        return desc;
-    }
+        public Builder withEnd(Date end) {
+            this.end = end;
+            return this;
+        }
 
-    public Image getPhoto() {
-        return photo;
-    }
+        public String getStatus() {
+            return status;
+        }
 
+        public Builder withStatus(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public String getLocation() {
+            return location;
+        }
+
+        public Builder withLocation(String location) {
+            this.location = location;
+            return this;
+        }
+
+        public int getMaxPerson() {
+            return maxPerson;
+        }
+
+        public Builder withMaxPerson(int maxPerson) {
+            this.maxPerson = maxPerson;
+            return this;
+        }
+
+        public String getHost() {
+            return host;
+        }
+
+        public Builder withHost(String host) {
+            this.host = host;
+            return this;
+        }
+
+        public String getCategory() {
+            return category;
+        }
+
+        public Builder withCategory(String category) {
+            this.category = category;
+            return this;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public Builder withDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+
+        public Image getPhoto() {
+            return photo;
+        }
+
+        public Builder withPhoto(Image photo) {
+            this.photo = photo;
+            return this;
+        }
+
+        public Event build() {
+            return new Event(this);
+        }
+    }
 
 }
