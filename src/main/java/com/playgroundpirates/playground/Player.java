@@ -5,12 +5,12 @@ package com.playgroundpirates.playground;
  */
 public class Player {
 
-    private long id;
-    private String handle;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private int active;
+    public final long id;
+    public final String handle;
+    public final String firstName;
+    public final String lastName;
+    public final String email;
+    public final int active;
 
     public Player(long id, String firstName, String lastName, String handle, String email)
     {
