@@ -63,7 +63,7 @@ public class EventRepo {
         return games;
     }
     
-    public Collection<Event> upcomingOtherEvent() {
+    public Collection<Event> getOtherEvent() {
     	List<Event> otherEvents = new ArrayList<>();
     	
     	template.query(

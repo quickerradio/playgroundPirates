@@ -19,8 +19,11 @@ public class IndexController {
 	@RequestMapping("/")
 	public String serverHomepage(Model model) {
 		Collection<Event> events = eventRepo.getUpcomingGame();
+		Collection<Event> otherEvents = eventRepo.getOtherEvent();
 		
 		model.addAttribute("events", events);
+		model.addAttribute("otherEvents", otherEvents);
+		
 		
 		return "index2";
 	}
