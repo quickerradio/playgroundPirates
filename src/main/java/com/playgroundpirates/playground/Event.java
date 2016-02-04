@@ -11,7 +11,7 @@ public class Event {
     public final OffsetDateTime end;
     public final String status;
     public final String location;
-    public final int maxPerson;
+    public final int maxPeople;
     public final String host;
     public final String category;
     public final String desc;
@@ -24,7 +24,7 @@ public class Event {
         end = builder.end;
         status = builder.status;
         location = builder.location;
-        maxPerson = builder.maxPerson;
+        maxPeople = builder.maxPeople;
         host = builder.host;
         category = builder.category;
         desc = builder.desc;
@@ -39,7 +39,7 @@ public class Event {
         private OffsetDateTime end;
         private String status;
         private String location;
-        private int maxPerson;
+        private int maxPeople;
         private String host;
         private String category;
         private String desc;
@@ -99,12 +99,12 @@ public class Event {
             return this;
         }
 
-        public int getMaxPerson() {
-            return maxPerson;
+        public int getMaxPeople() {
+            return maxPeople;
         }
 
-        public Builder withMaxPerson(int maxPerson) {
-            this.maxPerson = maxPerson;
+        public Builder withMaxPeople(int maxPeople) {
+            this.maxPeople = maxPeople;
             return this;
         }
 
