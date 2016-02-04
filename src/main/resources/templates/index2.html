@@ -1,34 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html SYSTEM
+        "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<!-- META -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 	<title>The TCC Playground</title>
 	
 	<!-- FAVICON -->
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" th:href="@{/img/favicon.ico}" href="../static/img/favicon.ico" />
 	
 	<!-- CORE CSS -->
-	<link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/helpers.css" rel="stylesheet">
+	<link th:href="@{/js/plugins/bootstrap/css/bootstrap.min.css}" href="../static/js/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" />
+	<link th:href="@{/css/helpers.css}" href="../static/css/helpers.css" rel="stylesheet" />
 	
 	<!-- PLUGINS -->
-	<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
-	<link href="plugins/animate/animate.min.css" rel="stylesheet">
-	<link href="plugins/animate/animate.delay.css" rel="stylesheet">
-	<link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link th:href="@{/js/plugins/font-awesome/css/font-awesome.min.css}" href="../static/js/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link th:href="@{/js/plugins/ionicons/css/ionicons.min.css}" href="../static/js/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
+	<link th:href="@{/js/plugins/animate/animate.min.css}" href="../static/js/plugins/animate/animate.min.css" rel="stylesheet" />
+	<link th:href="@{/js/plugins/animate/animate.delay.css}" href="../static/js/plugins/animate/animate.delay.css" rel="stylesheet" />
+	<link th:href="@{/js/plugins/owl-carousel/owl.carousel.css}" href="../static/js/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" />
 </head>
 
 <body class="header-fixed">
 	<header>
 		<div class="container">
 		<span class="bar hide"></span>
-		<a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+		<a class="logo"><img th:src="@{/img/logo.png}" src="../static/img/logo.png" alt="" /></a>
 		<nav>
 			<div class="nav-control">
 				<ul>
@@ -91,73 +92,30 @@
 							</li>
 						</ul>
 					</li>
-					
-					<li class="dropdown mega-dropdown">
-						<a href="#">Events<i class="fa fa-angle-down"></i></a>
+					<li class="dropdown mega-dropdown mega-dropdown-sm">
+						<a href="#">Events <i class="fa fa-angle-down"></i></a>
 						<ul class="dropdown-menu mega-dropdown-menu row">
-							<li class="col-sm-3">
+							<li class="col-lg-6">
 								<ul>
-									<li class="dropdown-header">Typography</li>
-									<li><a href="feature-typography.html"><i class="fa fa-sort-alpha-asc"></i> General Typography</a></li>
-									<li><a href="feature-blockquote.html"><i class="fa fa-quote-left"></i> Blockquote</a></li>
-									<li><a href="feature-helpers.html"><i class="fa fa-square-o"></i> Helper Classes</a></li>
-									<li><a href="feature-testimonials.html"><i class="fa fa-bullhorn"></i> Testimonials</a></li>
-									<li><a href="feature-grids.html"><i class="fa fa-th-large"></i> Grid Layouts</a></li>
-									<li><a href="feature-alerts.html"><i class="fa fa-bell-o"></i> Alert & Messages</a></li>
-									<li><a href="feature-labels.html"><i class="fa fa-bookmark-o"></i> Labels & Badges</a></li>
-									<li><a href="feature-media.html"><i class="fa fa-image"></i> Audio, Videos & Images</a></li>
-									<li><a href="feature-pagers.html"><i class="fa fa-ellipsis-h"></i> Pagination & Pagers</a></li>
+									<li class="dropdown-header">Default Examples</li>
+									<li><a href="games.html">Games</a></li>
+									<li><a href="games-single.html">Game Post</a></li>
 								</ul>
 							</li>
-							<li class="col-sm-3">
+							<li class="col-lg-6">
 								<ul>
-									<li class="dropdown-header">Button & Icons</li>
-									<li><a href="feature-buttons.html"><i class="fa fa-flash"></i> General Buttons</a></li>
-									<li><a href="feature-social-buttons.html"><i class="fa fa-thumbs-o-up"></i> Social Buttons</a></li>
-									<li><a href="feature-glyphicons.html"><i class="fa fa-chevron-circle-right"></i> Glyphicons</a></li>
-									<li><a href="feature-fontawesome.html"><i class="fa fa-chevron-circle-right"></i> FontAwesome icons</a></li>
-									<li><a href="feature-ionicons.html"><i class="fa fa-chevron-circle-right"></i> IonIcons</a></li>
-									<li class="dropdown-header">Components</li>
-									<li><a href="feature-media-objects.html"><i class="fa fa-align-justify"></i> Media Objects</a></li>
-									<li><a href="feature-page-headers.html"><i class="fa fa-align-justify"></i> Page headers</a></li>
-									<li><a href="feature-wells.html"><i class="fa fa-align-justify"></i> Wells</a></li>
-								</ul>
-							</li>
-							<li class="col-sm-3">
-								<ul>
-									<li class="dropdown-header">Default Elements</li>
-									<li><a href="feature-widgets.html"><i class="fa fa-th"></i> General Widgets</a></li>
-									<li><a href="feature-widgets-colors.html"><i class="fa fa-th"></i> Colored Widgets</a></li>
-									<li><a href="feature-thumbnails.html"><i class="fa fa-file-o"></i> Thumbnails</a></li>
-									<li><a href="feature-tabs.html"><i class="fa fa-external-link"></i> Accordion & Tabs</a></li>
-									<li><a href="feature-timeline.html"><i class="fa fa-th-large"></i> Timeline</a></li>
-									<li><a href="feature-tables.html"><i class="fa fa-th"></i> Tables</a></li>
-									<li><a href="feature-progress.html"><i class="fa fa-arrows-h"></i> Progress Bars</a></li>
-									<li><a href="feature-panels.html"><i class="fa fa-th"></i> Panels</a></li>
-								</ul>
-							</li>
-							<li class="col-sm-3">
-								<ul>
-									<li class="dropdown-header">Forms & Info</li>
-									<li><a href="feature-forms.html"><i class="fa fa-align-justify"></i> General Forms</a></li>
-									<li><a href="feature-form-layouts.html"><i class="fa fa-align-justify"></i> Form Layouts</a></li>		
-									<li><a href="feature-modals.html"><i class="fa fa-external-link"></i> Modals</a></li>			 	
-									<li><a href="feature-carousel.html"><i class="fa fa-arrows"></i> Carousel Examples</a></li>		
-									<li><a href="feature-charts.html"><i class="fa fa-bar-chart-o"></i> Charts & Countdowns</a></li>		
-									<li><a href="feature-google-maps.html"><i class="fa fa-map-marker"></i> Google Maps</a></li>		                                             
+									<li class="dropdown-header">Initial Examples</li>
+									<li><a href="timeline.html">Timeline</a></li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<li><a href="videos.html">Players</a></li>
-					<li><a href="gallery.html">Gallery (Coming Soon)</a></li>
-					<li><a href="contact.html">Contact</a></li>
 				</ul>
 				</div>
 			</nav>
 			<div class="nav-right">
 				<div class="nav-profile">
-					<a href="#" id="nav-profile" class="profile dropdown-toggle" data-toggle="dropdown"><img src="img/user/avatar.jpg" alt=""> <span>TCC Student</span></a>
+					<a href="#" id="nav-profile" class="profile dropdown-toggle" data-toggle="dropdown"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /> <span>TCC Student</span></a>
 					<ul class="dropdown-menu" aria-labelledby="nav-profile">
 						<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
 						<li><a href="#"><i class="fa fa-heart"></i> Likes <span class="label label-info pull-right">32</span></a></li>
@@ -171,11 +129,11 @@
 					<a href="#" id="nav-likes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-heart"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="nav-likes">
 						<li class="dropdown-header"><i class="fa fa-heart-o"></i> You have 5 likes</li>
-						<li><a href="#"><img src="holder.js/32x32" alt=""> Alien Isolation</a></li>
-						<li><a href="#"><img src="holder.js/32x32" alt=""> Witcher 3 <span class="label label-success pull-right">XBOX</span></a></li>
-						<li><a href="#"><img src="holder.js/32x32" alt=""> Last of Us</a></li>
-						<li><a href="#"><img src="holder.js/32x32" alt=""> Uncharted 4 <span class="label label-primary pull-right">PS4</span></a></li>
-						<li><a href="#"><img src="holder.js/32x32" alt=""> GTA 5 <span class="label label-warning pull-right">PC</span></a></li>
+						<li><a href="#"><img src="holder.js/32x32" alt="" /> Alien Isolation</a></li>
+						<li><a href="#"><img src="holder.js/32x32" alt="" /> Witcher 3 <span class="label label-success pull-right">XBOX</span></a></li>
+						<li><a href="#"><img src="holder.js/32x32" alt="" /> Last of Us</a></li>
+						<li><a href="#"><img src="holder.js/32x32" alt="" /> Uncharted 4 <span class="label label-primary pull-right">PS4</span></a></li>
+						<li><a href="#"><img src="holder.js/32x32" alt="" /> GTA 5 <span class="label label-warning pull-right">PC</span></a></li>
 						<li class="dropdown-footer"><a href="#">View all likes</a></li>
 					</ul>
 				</div>
@@ -187,7 +145,7 @@
 	
 	<div class="modal-search">
 		<div class="container">
-			<input type="text" class="form-control" placeholder="Type to search...">
+			<input type="text" class="form-control" placeholder="Type to search..." />
 			<i class="fa fa-times close"></i>
 		</div>
 	</div><!-- /search -->
@@ -197,7 +155,7 @@
 		<div class="owl-carousel posts">
 			<div class="news-block">
 				<a href="#" class="link">
-					<img src="holder.js/100%x500" alt="">
+					<img src="holder.js/100%x500" alt="" />
 					<div class="overlay">
 						<div class="caption">
 							<div class="comments"><a href="#"><i class="fa fa-comments margin-right-10"></i> <span>60</span></a></div>
@@ -209,7 +167,7 @@
 			</div>
 			<div class="news-block">
 				<a href="#" class="link">
-					<img src="holder.js/100%x500" alt="">
+					<img src="holder.js/100%x500" alt="" />
 					<div class="overlay">
 						<div class="caption">
 							<div class="comments"><a href="#"><i class="fa fa-comments margin-right-10"></i> <span>35</span></a></div>
@@ -221,7 +179,7 @@
 			</div>
 			<div class="news-block">
 				<a href="#" class="link">
-					<img src="holder.js/100%x500" alt="">
+					<img src="holder.js/100%x500" alt="" />
 					<div class="overlay">
 						<div class="caption">
 							<div class="comments"><a href="#"><i class="fa fa-comments margin-right-10"></i> <span>10</span></a></div>
@@ -233,7 +191,7 @@
 			</div>
 			<div class="news-block">
 				<a href="#" class="link">
-					<img src="holder.js/100%x500" alt="">
+					<img src="holder.js/100%x500" alt="" />
 					<div class="overlay">
 						<div class="caption">
 							<div class="comments"><a href="#"><i class="fa fa-comments margin-right-10"></i> <span>32</span></a></div>
@@ -245,7 +203,7 @@
 			</div>
 			<div class="news-block">
 				<a href="#" class="link">
-					<img src="holder.js/100%x500" alt="">
+					<img src="holder.js/100%x500" alt="" />
 					<div class="overlay">
 						<div class="caption">
 							<div class="comments"><a href="#"><i class="fa fa-comments margin-right-10"></i> <span>41</span></a></div>
@@ -263,7 +221,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<div class="entry-post list">
 							<div class="thumb">
-								<img src="holder.js/270x150" alt="">
+								<img src="holder.js/270x150" alt="" />
 								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>18</span></a></div>
 							</div>
 							<div class="caption">
@@ -274,7 +232,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<div class="entry-post list">
 							<div class="thumb">
-								<img src="holder.js/270x150" alt="">
+								<img src="holder.js/270x150" alt="" />
 								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>60</span></a></div>
 							</div>
 							<div class="caption">
@@ -285,7 +243,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<div class="entry-post list">
 							<div class="thumb">
-								<img src="holder.js/270x150" alt="">
+								<img src="holder.js/270x150" alt="" />
 								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>26</span></a></div>
 							</div>
 							<div class="caption">
@@ -296,7 +254,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<div class="entry-post video">
 							<div class="thumb">
-								<img src="holder.js/270x150" alt="">
+								<img src="holder.js/270x150" alt="" />
 								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>31</span></a></div>
 							</div>
 							<div class="caption">
@@ -331,7 +289,7 @@
 						<div class="post post-md">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt=""></a>
+									<a href="#"><img src="holder.js/240x160" alt="" /></a>
 								</div>
 								
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
@@ -346,7 +304,7 @@
 									<ul class="post-meta">
 										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
 										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										</li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
+										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -357,7 +315,7 @@
 						<div class="post post-md">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt=""></a>
+									<a href="#"><img src="holder.js/240x160" alt="" /></a>
 								</div>
 							
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
@@ -372,7 +330,7 @@
 									<ul class="post-meta">
 										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
 										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										</li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
+										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -383,7 +341,7 @@
 						<div class="post post-md">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt=""></a>
+									<a href="#"><img src="holder.js/240x160" alt="" /></a>
 								</div>
 							
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
@@ -398,7 +356,7 @@
 									<ul class="post-meta">
 										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
 										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										</li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
+										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -409,7 +367,7 @@
 						<div class="post post-md">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt=""></a>
+									<a href="#"><img src="holder.js/240x160" alt="" /></a>
 								</div>
 							
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
@@ -424,7 +382,7 @@
 									<ul class="post-meta">
 										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
 										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										</li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
+										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -435,7 +393,7 @@
 						<div class="post post-md">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt=""></a>
+									<a href="#"><img src="holder.js/240x160" alt="" /></a>
 								</div>
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
 									<div class="post-header">
@@ -449,22 +407,19 @@
 									<ul class="post-meta">
 										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
 										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										</li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
+										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 						
 						<div class="text-center"><a href="#" class="btn btn-primary btn-rounded btn-shadow margin-top-10">Load more</a></div>
-					
-					
-						
 						<h4 class="page-header margin-bottom-30 margin-top-40">Top News</h4>
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 no-padding-xs no-padding-sm">
 								<div class="entry-post list">
 									<div class="thumb">
-										<img src="holder.js/240x130" alt="">
+										<img src="holder.js/240x130" alt="" />
 										<div class="thumb-info"><span class="label label-primary">PS4</span></div>
 										<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>33</span></a></div>
 									</div>
@@ -477,7 +432,7 @@
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 no-padding-xs no-padding-sm">
 								<div class="entry-post list">
 									<div class="thumb">
-										<img src="holder.js/240x130" alt="">
+										<img src="holder.js/240x130" alt="" />
 										<div class="thumb-info"><span class="label label-warning">PC</span></div>
 										<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>20</span></a></div>
 									</div>
@@ -490,7 +445,7 @@
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 no-padding-xs no-padding-sm">
 								<div class="entry-post list">
 									<div class="thumb">
-										<img src="holder.js/240x130" alt="">
+										<img src="holder.js/240x130" alt="" />
 										<div class="thumb-info"><span class="label label-success">Xbox</span></div>
 										<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>41</span></a></div>
 									</div>
@@ -500,11 +455,6 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						
-						<h4 class="page-header margin-bottom-30 margin-top-40">Recent Video</h4>
-						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/vIg5dAeudvQ?rel=0" allowfullscreen></iframe>
 						</div>
 					</div>
 					
@@ -521,7 +471,7 @@
 											<h4 class="game-title">The Witcher 3: Wild Hunt</h4>
 											<span>Nov 17, 2015</span>
 										</div>
-									</a>
+									</a>f
 								</li>
 								<li style="background-image: url(img/cover/cover.jpg);">
 									<a href="#" class="overlay">
@@ -567,35 +517,35 @@
 							<div class="widget-list player">
 								<ul>
 									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">CD Projekt Red Studio</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 15, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Blood and Gore</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 13, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Warner Bros. Interactive</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 12, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="Nathan Drake"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb" data-toggle="tooltip" title="Nathan Drake"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Spike Chunsoft</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 10, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Spike Chunsoft</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 10, 2015</p>
@@ -604,48 +554,40 @@
 								</ul>
 							</div>
 						</div>
-						
-						<div class="widget">
-							<div class="title">Recent Video</div>
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/IsDX_LiJT7E?rel=0" allowfullscreen></iframe>
-							</div>
-						</div>
-						
 						<div class="widget">
 							<div class="title">Recent Posts</div>
 							<div class="widget-list">
 								<ul>
 									<li>
-										<a href="#" class="thumb"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">CD Projekt Red Studio</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 15, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Blood and Gore</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 13, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Warner Bros. Interactive</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 12, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Spike Chunsoft</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 10, 2015</p>
 										</div>
 									</li>
 									<li>
-										<a href="#" class="thumb"><img src="img/user/avatar.jpg" alt=""></a>
+										<a href="#" class="thumb"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
 										<div class="widget-list-meta">
 											<h4 class="widget-list-title"><a href="#">Spike Chunsoft</a></h4>
 											<p><i class="fa fa-clock-o margin-right-5"></i> September 10, 2015</p>
@@ -654,21 +596,8 @@
 								</ul>
 							</div>
 						</div>
-						
-						<div class="widget no-margin">
-							<div class="title">Follow us on Facebook</div>
-							<div id="fb-root"></div>
-							<script>(function(d, s, id) {   var js, fjs = d.getElementsByTagName(s)[0];   if (d.getElementById(id)) return;   js = d.createElement(s); js.id = id;   js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.5";   fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
-							<div class="fb-page" data-href="hte" data-adapt-container-width="true" data-hide-cover="false" data-shotps://www.facebook.com/yakuzi.eu" data-width="364" data-small-header="falsw-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/yakuzi.eu"><a href="https://www.facebook.com/yakuzi.eu">yakuzi.eu</a></blockquote></div></div>
-						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		
-		<section class="padding-top-20 padding-left-20 padding-right-20">
-			<div class="container">
-				
 			</div>
 		</section>
 	</div>
@@ -742,11 +671,11 @@
 					<a class="btn btn-block btn-social btn-facebook margin-bottom-10 border-radius-6"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
 						
 					<div class="separator"><span>or</span></div>
-					<input type="text" class="form-control input-lg" name="username" placeholder="Email address" required>
+					<input type="text" class="form-control input-lg" name="username" placeholder="Email address" required="required" />
 					<span class="help-block"></span>				
-					<input type="password" class="form-control input-lg" name="password" placeholder="Password" required>	
+					<input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required" />
 					<div class="checkbox margin-top-20 no-margin-bottom">
-						<input type="checkbox" id="checkbox" checked="checked"> 
+						<input type="checkbox" id="checkbox" checked="checked" />
 						<label for="checkbox">Remember me</label>
 					</div>
 				</div>
@@ -760,10 +689,11 @@
 	</div><!-- /.modal --> 
 	
 	<!-- Javascript -->
-	<script src="plugins/jquery/jquery-1.11.1.min.js"></script>
-	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-	<script src="plugins/core.js"></script>
+	<script th:src="@{/js/plugins/jquery/jquery-1.11.1.min.js}" src="../static/js/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script th:src="@{/js/plugins/bootstrap/js/bootstrap.min.js}" src="../static/js/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script th:src="@{/js/plugins/owl-carousel/owl.carousel.min.js}" src="../static/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script th:src="@{/js/plugins/core.js}" src="../static/js/plugins/core.js"></script>
+    <script src="holder.js"></script>
 	<script>
 	(function($) {
 	"use strict";
