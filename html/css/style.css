@@ -5,12 +5,12 @@
 1. General
 ========================================================================== */
 body {
-	background: #FFF; 
+	background: #99CCFF; 
 	font-size: 13px;
 	font-family: "Open Sans", sans-serif;
 }
 a {
-	color: #313131;
+	color: #A3AF07;
 	-webkit-transition: 0.25s;
 	transition: 0.25s;
 }
@@ -61,11 +61,11 @@ pre {
 	color: #313131;
 }
 .btn.btn-link:hover {
-	color: #2776dc;
+	color: #004F6D;
 	text-decoration: none;
 }
 .btn.btn-primary {
-	background-color: #2776dc;
+	background-color: #004F6D;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:active,
@@ -463,7 +463,7 @@ img {
 	
 /* --- p --- */
 p {
-	color: rgba(0,0,0, 0.6);
+	color: #FFFFFF;
 	margin: 0 0 10px 0;
 	line-height: 22px;
 	font-size: 14px;
@@ -1300,8 +1300,8 @@ header ul li a {
 	line-height: 55px;
 	padding: 0 12px;
 	color: #FFFFFF;
-	font-size: 15px;
-	font-family: "Roboto", sans-serif;
+	font-size: 25px;
+	font-family: "Trade Gothic Bold Condensed 20", sans-serif;
 	font-weight: 500;
 	display: inline-block;
 }
@@ -1889,10 +1889,10 @@ section .game-title .page-header {
 .widget .title {
 	padding: 5px 0 5px 20px;
 	border: 0;
-	font-size: 14px;
+	font-size: 18px;
 	text-align: left;
 	margin: 0 0 25px 0;
-	font-weight: 700;
+	font-weight: bold;
 	text-transform: uppercase;
 	color: rgba(39, 39, 39, 0.8);
 	border-left: 5px solid #2776dc;
@@ -2015,9 +2015,9 @@ section .game-title .page-header {
 	position: relative;
 	padding: 0 20px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#99ccff+0,99ccff+21,99ccff+99,7db9e8+100&0.89+1,0.89+21,0.23+99,0.23+100 */
-background: -moz-linear-gradient(left,  rgba(153,204,255,0.89) 0%, rgba(153,204,255,0.89) 1%, rgba(153,204,255,0.89) 21%, rgba(153,204,255,0.23) 99%, rgba(125,185,232,0.23) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(153,204,255,0.89) 0%,rgba(153,204,255,0.89) 1%,rgba(153,204,255,0.89) 21%,rgba(153,204,255,0.23) 99%,rgba(125,185,232,0.23) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(153,204,255,0.89) 0%,rgba(153,204,255,0.89) 1%,rgba(153,204,255,0.89) 21%,rgba(153,204,255,0.23) 99%,rgba(125,185,232,0.23) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(left,  rgba(153,204,255,0.89) 0%, rgba(153,204,255,0.89) 1%, rgba(0, 79, 109, 1.0) 21%, rgba(153,204,255,0.23) 99%, rgba(125,185,232,0.23) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(153,204,255,0.89) 0%,rgba(153,204,255,0.89) 1%,rgba(0, 79, 109, 1.0) 21%,rgba(153,204,255,0.23) 99%,rgba(125,185,232,0.23) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(153,204,255,0.89) 0%,rgba(153,204,255,0.89) 1%,rgba(0, 79, 109, 1.0) 21%,rgba(153,204,255,0.23) 99%,rgba(125,185,232,0.23) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e399ccff', endColorstr='#3b7db9e8',GradientType=1 ); /* IE6-9 */
 
 	-webkit-transition: background 0.25s linear;
@@ -2652,7 +2652,8 @@ footer .widget  {
 	text-align: left;
 }
 footer .widget .title {
-	font-size: 18px;
+	font-size: 22px;
+	font-weight: 900;
 	padding: 5px 0 10px 0;
 	color: #FFF;
 	text-align: left;
