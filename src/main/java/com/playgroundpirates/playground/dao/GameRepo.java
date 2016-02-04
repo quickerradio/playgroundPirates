@@ -32,7 +32,7 @@ public class GameRepo {
     public Collection<Game> getTopGames() {
         List<Game> games = new ArrayList<>();
         template.query(
-                "SELECT * FROM MAIN_GAMEEVENTS",
+                "SELECT * FROM MAIN_TOPGAMES",
                 (rs) -> {
                     Game.Builder builder = new Game.Builder();
                     builder.withName(rs.getString("GAME_NAME"));
@@ -42,9 +42,7 @@ public class GameRepo {
                     builder.withMaxPlayers(rs.getInt("GAME_MAXPLAYER"));
                     builder.withDesc(clob.getSubString(1, (int) clob.length()));
                     games.add(builder.build());
-                    Blob blob = rs.getBlob("GAME_PHOTO");
-                    //builder.withDesc(blob.getSubString(1, (int) clob.length()));
-                    games.add(builder.build());
+   
                 }
         );
         return games;

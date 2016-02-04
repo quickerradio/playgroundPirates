@@ -20,11 +20,9 @@ public class IndexController {
 	public String serverHomepage(Model model) {
 		Collection<Event> events = eventRepo.getUpcomingGame();
 		Collection<Event> otherEvents = eventRepo.getOtherEvent();
-		Collection<Event> eventList = eventRepo.getEventList();
 		
 		model.addAttribute("events", events);
 		model.addAttribute("otherEvents", otherEvents);
-		model.addAttribute("eventList", eventList);
 		
 		return "index2";
 	}
