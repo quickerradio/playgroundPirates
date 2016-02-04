@@ -49,7 +49,12 @@ Temporary Items
 #IDE Files
 .idea
 *.iml
+.classpath
+.project
+.settings
 
 #Built Files
 build
 .gradle
+/bin/
+
