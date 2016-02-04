@@ -38,5 +38,11 @@ public class Player {
         return lastName;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public String getHandle() {
+        return handle;
+    }
 }
