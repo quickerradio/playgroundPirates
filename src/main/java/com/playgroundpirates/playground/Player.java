@@ -9,8 +9,13 @@ public class Player {
     public final String handle;
     public final String firstName;
     public final String lastName;
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
     public final String email;
-    public final int active;
+    private int active;
 
     public Player(long id, String firstName, String lastName, String handle, String email)
     {
