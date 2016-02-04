@@ -1,13 +1,11 @@
 package com.playgroundpirates.playground.dao;
 
+import com.playgroundpirates.playground.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.playgroundpirates.playground.Event;
-
 import javax.sql.DataSource;
-
 import java.sql.Clob;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
