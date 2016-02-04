@@ -60,4 +60,41 @@ public class EventRepo {
         );
         return games;
     }
+    
+    public Collection<Event> upcomingOtherEvent() {
+    	List<Event> otherEvents = new ArrayList<>();
+    	
+    	template.query(
+    		"SELECT * FROM MAIN_OTHEREVENT", 
+    		(rs) -> {
+    			Event.Builder builder = new Event.Builder();
+                builder.withName(rs.getString("EVENT_NAME"));
+                builder.withLocation(rs.getString("EVENT_LOCATION"));
+                builder.withStart(
+                    OffsetDateTime.of(
+                        LocalDateTime.parse(
+                            rs.getString("EVENT_START"),
+                            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                        ),
+                        ZoneOffset.UTC
+                    )
+                );
+                builder.withEnd(
+                    OffsetDateTime.of(
+                        LocalDateTime.parse(
+                            rs.getString("EVENT_END"),
+                            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                        ),
+                        ZoneOffset.UTC
+                    )
+                );
+                builder.withHost(rs.getString("EVENT_HOST"));
+                builder.withCategory(rs.getString("EVENT_CATEGORY"));
+                Clob clob = rs.getClob("EVENT_DESC");
+                builder.withDesc(clob.getSubString(1, (int) clob.length()));
+                otherEvents.add(builder.build());	
+    		}
+    	);
+    	return otherEvents;
+    }
 }

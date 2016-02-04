@@ -15,7 +15,6 @@ public class Event {
     public final String host;
     public final String category;
     public final String desc;
-    public final Image photo;
 
     private Event(Builder builder) {
         id = builder.id;
@@ -28,7 +27,6 @@ public class Event {
         host = builder.host;
         category = builder.category;
         desc = builder.desc;
-        photo = builder.photo;
     }
 
     public static class Builder {
@@ -43,7 +41,6 @@ public class Event {
         private String host;
         private String category;
         private String desc;
-        private Image photo;
 
         public long getId() {
             return id;
@@ -132,15 +129,6 @@ public class Event {
 
         public Builder withDesc(String desc) {
             this.desc = desc;
-            return this;
-        }
-
-        public Image getPhoto() {
-            return photo;
-        }
-
-        public Builder withPhoto(Image photo) {
-            this.photo = photo;
             return this;
         }
 
