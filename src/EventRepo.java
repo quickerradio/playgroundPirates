@@ -12,7 +12,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Repository
-public class EventRepo {
+public class MainGameEventsRepo {
 
     JdbcTemplate template;
 
@@ -21,21 +21,19 @@ public class EventRepo {
         template = new JdbcTemplate(dataSource);
     }
 
-    public Collection<event> getAll() {
-        List<event> events = new ArrayList<>();
+    public Collection<EVENT> getAll() {
+        List<EVENT> events = new ArrayList<>();
 		
-		//hendel: pulls the entire events table, should not be necessary for 
-		//	initial project so check your needs before using. 
+		/* Hendel
+		Pulls all data from the EVENT table. You should not need this table and should
+		use the views instead. Check before using this */
         template.query(
-            "SELECT * FROM jwolski.event",
+            "SELECT * FROM jwolski.EVENT",
             (rs) -> {
-                events.add(new event(
-                        rs.getLong("event_ID"),
+                events.add(new EVENT(
                         rs.getString("EVENT_NAME"),
-                        rs.getString("EVENT_START"),
-                        rs.getString("EVENT_END"),
+                        rs.getString("EVENT_DATE"),
                         rs.getString("EVENT_LOCATION"),
-                        rs.getString("EVENT_MAXPLAYER"),
                         rs.getString("EVENT_HOST"),
                         rs.getString("EVENT_CATEGORY"),
                         rs.getString("EVENT_PHOTO"),
@@ -46,6 +44,6 @@ public class EventRepo {
             }
         );
 
-        return EVENTS;
+        return events;
     }
 }
