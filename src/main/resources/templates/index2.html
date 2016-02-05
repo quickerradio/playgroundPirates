@@ -169,11 +169,15 @@
 					<!-- need to update with the correct file name.  -->
 					<img src="holder.js/1920x630" class="full-width" alt=""/>
 					<div class="carousel-caption" >
+					<div class="carousel-caption" style="align:middle; padding:0px 20%; width:100%">
 						<h1 data-animation="animated animate1 fadeInDown" th:text="${event.name}"></h1>
 						<p data-animation="animated animate7 fadeIn" th:text="${event.desc} "></p>
+						<p style="font-size:150%" data-animation="animated animate7 fadeIn" th:text="${event.desc} "></p>
 						
 						<p data-animation="animated animate7 fadeIn" th:text="${#temporals.format(event.start, 'MMM dd hh:mm a')}"></p>
 						<a href="#signin" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded text-uppercase" data-animation="animated animate10 fadeIn">Became a member now</a>
+						<p style="font-size:200%" data-animation="animated animate7 fadeIn" th:text="${#temporals.format(event.start, 'MMM dd hh:mm a')}"></p><br/>
+						<a href="#signin" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded text-uppercase" data-animation="animated animate10 fadeIn">Become a member now</a>
 					</div>
 				</div>
 					<a class="left carousel-control" href="#full-carousel" role="button" data-slide="prev">
