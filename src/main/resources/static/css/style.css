@@ -5,7 +5,7 @@
 1. General
 ========================================================================== */
 body {
-	background: #99CCFF; 
+	background: #666D70; 
 	font-size: 13px;
 	font-family: "Open Sans", sans-serif;
 }
@@ -1300,7 +1300,7 @@ header ul li a {
 	line-height: 55px;
 	padding: 0 12px;
 	color: #FFFFFF;
-	font-size: 25px;
+	font-size: 14px;
 	font-family: "Trade Gothic Bold Condensed 20", sans-serif;
 	font-weight: 500;
 	display: inline-block;
