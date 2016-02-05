@@ -28,8 +28,8 @@ public class ActivePlayerRepo {
         template = new JdbcTemplate(dataSource);
     }
     
-    public Collection<Event> getActivePlayers() {
-        List<Event> activePlayers = new ArrayList<>();
+    public Collection<Player> getActivePlayers() {
+        List<Player> activePlayers = new ArrayList<>();
         template.query(
             "SELECT * FROM MAIN_ACTIVEPLAYER",
             (rs) -> {
