@@ -8,7 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.playgroundpirates.playground.Event;
+import com.playgroundpirates.playground.Game;
 import com.playgroundpirates.playground.dao.EventRepo;
+import com.playgroundpirates.playground.dao.GameRepo;
 
 @Controller
 public class IndexController {
@@ -16,16 +18,18 @@ public class IndexController {
 	@Autowired
 	EventRepo eventRepo;
 	
+	@Autowired
 	GameRepo gameRepo;
 	
 	@RequestMapping("/")
 	public String serverHomepage(Model model) {
 		Collection<Event> events = eventRepo.getUpcomingGame();
 		Collection<Event> otherEvents = eventRepo.getOtherEvent(); 
-		//Collection<Game> topGames = gameRepo.
+		Collection<Game> topGames = gameRepo.getTopGames();
 		
 		model.addAttribute("events", events);
 		model.addAttribute("otherEvents", otherEvents);
+		model.addAttribute("topGames", topGames);
 		
 		return "index2";
 	}

@@ -14,7 +14,6 @@ public class Game {
     public final int count;
     public final int maxPlayers;
     public final String desc;
-    public final Image photo;
 
 
     private Game(Builder builder)
@@ -26,11 +25,10 @@ public class Game {
         count = builder.count;
         maxPlayers = builder.maxPlayers;
         desc = builder.desc;
-        photo = builder.photo;
 
     }
 
-    public static  class  Builder{
+    public static class Builder{
         private long id;
         private String name;
         private String category;
@@ -38,12 +36,6 @@ public class Game {
         private int count;
         private int maxPlayers;
         private String desc;
-        private Image photo;
-
-        public Builder withPhoto(Image photo){
-            this.photo = photo;
-            return this;
-        }
 
         public Builder withDesc(String desc){
             this.desc = desc;
@@ -108,10 +100,6 @@ public class Game {
             return desc;
         }
 
-        public Image getPhoto() {
-            return photo;
-        }
-
         public Game build() {
             return new Game(this);
         }
@@ -145,10 +133,6 @@ public class Game {
 
     public String getDesc() {
         return desc;
-    }
-
-    public Image getPhoto() {
-        return photo;
     }
 }
 
