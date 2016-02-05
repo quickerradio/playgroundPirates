@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.playgroundpirates.playground.Event;
 import com.playgroundpirates.playground.dao.EventRepo;
+import com.playgroundpirates.playground.dao.GameRepo;
 
 @Controller
 public class IndexController {

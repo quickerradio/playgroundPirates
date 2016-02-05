@@ -160,10 +160,11 @@
 		
 <!-- BEGIN SLIDER PHOTO -->
 <div id="full-carousel" class="carousel slide full-carousel carousel-fade" data-ride="carousel">
-			<div class="carousel-inner" role="listbox" th:each="event : ${events}">
-				<div class="item active">
+			<div class="carousel-inner" role="listbox" th:each="event, iterstat : ${events}" >
+			
+				<div class="item" th:classAppend="${iterStat.first}? ' active'" >
 					<!-- need to update with the correct file name.  -->
-					<img src="holder.js/1920x630" class="full-width" alt="">
+					<img src="holder.js/1920x630" class="full-width" alt=""/>
 					<div class="carousel-caption">
 						<h1 data-animation="animated animate1 fadeInDown" th:text="${event.name}"></h1>
 						<p data-animation="animated animate7 fadeIn" th:text="${event.desc}"></p>
@@ -172,7 +173,7 @@
 				</div>
 				
 				
-				
+			</div>	
 				
 							
 				<a class="left carousel-control" href="#full-carousel" role="button" data-slide="prev">
@@ -183,7 +184,7 @@
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
-			</div>
+			
 		</div>
 
 
@@ -194,15 +195,22 @@
 
 
 <!-- END SLIDER PHOTO -->
+			
 				
-		<section class="bg-grey-50 padding-top-40 no-padding-bottom relative border-bottom-1 border-grey-200">
+		<!-- BEGIN OTHER EVENTS -->
+		<section class="bg-grey-50 padding-top-40 no-padding-bottom relative border-bottom-1 border-grey-200">			
 			<div class="container">
-				<div class="row">
+				
+				<div class="row" th:each="event : ${otherEvents}">
+				
+				
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<div class="entry-post list">
 							<div class="thumb">
 								<img src="holder.js/270x150" alt="" />
-								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>18</span></a></div>
+								<div class="thumb-nav"><a href="#">
+								
+								<i class="fa fa-comments"></i> <span>18</span></a></div>
 							</div>
 							<div class="caption">
 								<h3 class="main-title"><a href="#">Assassin’s Creed Syndicate</a></h3>
@@ -245,6 +253,7 @@
 				</div>
 			</div>
 		</section>
+		<!-- END OTHER EVENTS -->
 				
 		<section class="padding-top-40 padding-bottom-40">	
 			<div class="container">
