@@ -165,9 +165,11 @@
 				<div class="item" th:each="event, iterstat : ${events}" th:classAppend="${iterstat.first}? ' active'" >
 					<!-- need to update with the correct file name.  -->
 					<img src="holder.js/1920x630" class="full-width" alt=""/>
-					<div class="carousel-caption">
+					<div class="carousel-caption" >
 						<h1 data-animation="animated animate1 fadeInDown" th:text="${event.name}"></h1>
-						<p data-animation="animated animate7 fadeIn" th:text="${event.desc}"></p>
+						<p data-animation="animated animate7 fadeIn" th:text="${event.desc} "></p>
+						
+						<p data-animation="animated animate7 fadeIn" th:text="${#temporals.format(event.start, 'MMM dd hh:mm a')}"></p>
 						<a href="#signin" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded text-uppercase" data-animation="animated animate10 fadeIn">Became a member now</a>
 					</div>
 				</div>
@@ -189,10 +191,6 @@
 
 
 
-
-
-
-
 <!-- END SLIDER PHOTO -->
 			
 				
@@ -200,55 +198,22 @@
 		<section class="bg-grey-50 padding-top-40 no-padding-bottom relative border-bottom-1 border-grey-200">			
 			<div class="container">
 				
-				<div class="row" th:each="event : ${otherEvents}">
+				<div class="row" >
 				
 				
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"  th:each="event : ${otherEvents}" >
 						<div class="entry-post list">
 							<div class="thumb">
 								<img src="holder.js/270x150" alt="" />
-								<div class="thumb-nav"><a href="#">
-								
-								<i class="fa fa-comments"></i> <span>18</span></a></div>
 							</div>
 							<div class="caption">
-								<h3 class="main-title"><a href="#">Assassin’s Creed Syndicate</a></h3>
+								<h3 class="main-title" th:text="${event.name}" ></h3>
+								<p th:text="${#temporals.format(event.start, 'MMM dd hh:mm a')}"></p>
+								<p th:text="${event.desc}"></p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<div class="entry-post list">
-							<div class="thumb">
-								<img src="holder.js/270x150" alt="" />
-								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>60</span></a></div>
-							</div>
-							<div class="caption">
-								<h3 class="main-title"><a href="#">Amazing Spiderman 2</a></h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<div class="entry-post list">
-							<div class="thumb">
-								<img src="holder.js/270x150" alt="" />
-								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>26</span></a></div>
-							</div>
-							<div class="caption">
-								<h3 class="main-title"><a href="#">HITMAN Welcome to Sapienza</a></h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<div class="entry-post video">
-							<div class="thumb">
-								<img src="holder.js/270x150" alt="" />
-								<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>31</span></a></div>
-							</div>
-							<div class="caption">
-								<h3 class="main-title"><a href="#">The Trouble with Gotham</a></h3>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section>
