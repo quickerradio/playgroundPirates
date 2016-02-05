@@ -167,7 +167,7 @@
 				
 					<div class="item" th:each="event, iterstat : ${events}" th:classAppend="${iterstat.first}? ' active'" >
 						<!-- need to update with the correct file name.  -->
-						<img th:src="@{event.photo}"  class="full-width" alt=""/>
+						<img th:src="@{${event.imgUrl}}"  class="full-width" alt=""/>
 						<div class="carousel-caption" style="align:middle; padding:0px 20%; width:100%">
 							<h1 data-animation="animated animate1 fadeInDown" th:text="${event.name}"></h1>
 							<p style="font-size:150%" data-animation="animated animate7 fadeIn" th:text="${event.desc} "></p>
