@@ -15,6 +15,7 @@ public class Event {
     public final String host;
     public final String category;
     public final String desc;
+    public final Sting imgUrl;
 
     private Event(Builder builder) {
         id = builder.id;
@@ -27,6 +28,7 @@ public class Event {
         host = builder.host;
         category = builder.category;
         desc = builder.desc;
+        imgUrl = builder.imgUrl;
     }
 
     public static class Builder {
@@ -41,7 +43,17 @@ public class Event {
         private String host;
         private String category;
         private String desc;
+        private String imgUrl;
+        
+        public String getImgUrl() {
+        	return imgUrl;
+        }
 
+        public Builder withImg(String img) {
+        	this.imgUrl = img;
+        	return this;
+        }
+        
         public long getId() {
             return id;
         }

@@ -39,6 +39,7 @@ public class GameRepo {
                     Clob clob = rs.getClob("GAME_DESC");
                     builder.withMaxPlayers(rs.getInt("GAME_MAXPLAYER"));
                     builder.withDesc(clob.getSubString(1, (int) clob.length()));
+                    builder.withImg(rs.getString("GAME_PHOTO"));
                     games.add(builder.build());
    
                 }

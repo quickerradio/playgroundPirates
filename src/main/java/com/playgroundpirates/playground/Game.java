@@ -2,6 +2,8 @@ package com.playgroundpirates.playground;
 
 import java.awt.*;
 
+import com.playgroundpirates.playground.Event.Builder;
+
 /**
  * Created by hackathon on 2/4/2016.
  */
@@ -14,6 +16,7 @@ public class Game {
     public final int count;
     public final int maxPlayers;
     public final String desc;
+    public final String imgUrl;
 
 
     private Game(Builder builder)
@@ -25,6 +28,7 @@ public class Game {
         count = builder.count;
         maxPlayers = builder.maxPlayers;
         desc = builder.desc;
+        imgUrl = builder.imgUrl;
 
     }
 
@@ -36,6 +40,16 @@ public class Game {
         private int count;
         private int maxPlayers;
         private String desc;
+        private String imgUrl;
+        
+        public String getImgUrl() {
+        	return imgUrl;
+        }
+
+        public Builder withImg(String img) {
+        	this.imgUrl = img;
+        	return this;
+        }
 
         public Builder withDesc(String desc){
             this.desc = desc;

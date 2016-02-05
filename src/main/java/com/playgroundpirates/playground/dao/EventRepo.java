@@ -55,6 +55,7 @@ public class EventRepo {
                 builder.withCategory(rs.getString("EVENT_CATEGORY"));
                 Clob clob = rs.getClob("EVENT_DESC");
                 builder.withDesc(clob.getSubString(1, (int) clob.length()));
+                builder.withImg(rs.getString("EVENT_PHOTO"));
                 games.add(builder.build());
             }
         );
@@ -92,6 +93,7 @@ public class EventRepo {
                 builder.withCategory(rs.getString("EVENT_CATEGORY"));
                 Clob clob = rs.getClob("EVENT_DESC");
                 builder.withDesc(clob.getSubString(1, (int) clob.length()));
+                builder.withImg(rs.getString("EVENT_PHOTO"));
                 otherEvents.add(builder.build());	
     		}
     	);
@@ -129,6 +131,7 @@ public class EventRepo {
                 builder.withCategory(rs.getString("EVENT_CATEGORY"));
                 Clob clob = rs.getClob("EVENT_DESC");
                 builder.withDesc(clob.getSubString(1, (int) clob.length()));
+                builder.withImg(rs.getString("EVENT_PHOTO"));
                 eventList.add(builder.build());	
     		}
     	);
