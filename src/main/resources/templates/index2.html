@@ -238,8 +238,8 @@
 								</ul>
 							</div>
 						</div>
-						
-						<div class="post post-md">
+						-------------------------------------------------------
+						<div class="post post-md" th:each="game : ${topGames}">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
 									<a href="#"><img src="holder.js/240x160" alt="" /></a>
@@ -248,7 +248,7 @@
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
 									<div class="post-header">
 										<div class="post-title">
-											<h3 class="font-size-20"><a href="blog-post.html">Alien Isolation Dev on Lack of Multiplayer: "We Did Talk About It a Lot"</a></h3>
+											<h3 class="font-size-20" th:text="${game.name}">TITLE</h3>
 										</div>
 									</div>
 									
@@ -264,31 +264,8 @@
 							<div class="divider"></div>
 						</div>
 						
-						
-						<div class="post post-md">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt="" /></a>
-								</div>
+						-----------------------------------------------------------
 							
-								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
-									<div class="post-header">
-										<div class="post-title">
-											<h3 class="font-size-20"><a href="blog-post.html">How to Play Star Wars Battlefront Before It Launches</a></h3>
-										</div>
-									</div>
-									
-									<p class="font-size-13 line-height-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit ante, congue sodales orci ac, ultrices pretium lectus. Maecenas lorem enim, dignissim sed lacus non, feugiat iaculis lorem. Integer eu aliquet diam.</p>
-								
-									<ul class="post-meta">
-										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
-										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="divider"></div>
-						</div>
 						
 						
 						<div class="post post-md">
