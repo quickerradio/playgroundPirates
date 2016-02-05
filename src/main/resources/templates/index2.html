@@ -160,9 +160,9 @@
 		
 <!-- BEGIN SLIDER PHOTO -->
 <div id="full-carousel" class="carousel slide full-carousel carousel-fade" data-ride="carousel">
-			<div class="carousel-inner" role="listbox" th:each="event, iterstat : ${events}" >
+			<div class="carousel-inner" role="listbox"  >
 			
-				<div class="item" th:classAppend="${iterStat.first}? ' active'" >
+				<div class="item" th:each="event, iterstat : ${events}" th:classAppend="${iterstat.first}? ' active'" >
 					<!-- need to update with the correct file name.  -->
 					<img src="holder.js/1920x630" class="full-width" alt=""/>
 					<div class="carousel-caption">
@@ -171,19 +171,18 @@
 						<a href="#signin" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded text-uppercase" data-animation="animated animate10 fadeIn">Became a member now</a>
 					</div>
 				</div>
-				
-				
+					<a class="left carousel-control" href="#full-carousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#full-carousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
 			</div>	
 				
 							
-				<a class="left carousel-control" href="#full-carousel" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#full-carousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
+				
 			
 		</div>
 
