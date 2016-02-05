@@ -15,7 +15,7 @@ public class Event {
     public final String host;
     public final String category;
     public final String desc;
-    public final Sting imgUrl;
+    public final String imgUrl;
 
     private Event(Builder builder) {
         id = builder.id;
