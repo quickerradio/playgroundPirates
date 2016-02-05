@@ -218,10 +218,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 border-right-1 border-grey-200 no-border-sm">
+						
+						<!-- BEGIN TOP GAMES HEADER -->
 						<div class="page-header margin-bottom-30 no-margin-bottom-xs height-35">
 							<h4 class="pull-left">Top Games</h4>
-							
 							<div class="pull-right dropdown hidden-xs text-initial"> 
+								
 								sort by: 
 								<a href="#" id="orderby" class="btn btn-xs btn-default margin-left-5 padding-right-10 padding-left-10 dropdown-toggle text-initial" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">category <i class="fa fa-angle-down no-margin-right"></i></a>
 								<ul class="dropdown-menu" aria-labelledby="orderby">
@@ -230,8 +232,12 @@
 									<li><a href="#" class="text-initial">Popularity</a></li>
 									
 								</ul>
+								<!-- END SORT BY -->
 							</div>
 						</div>
+						<!-- END TOP GAMES HEADER -->
+						
+						
 						<!-- top games list pulling from the database DO NOT ALTER -->
 						<div class="post post-md" th:each="game : ${topGames}">
 							<div class="row">
@@ -245,7 +251,7 @@
 											<h3 class="font-size-20" th:text="${game.name}">TITLE</h3>
 										</div>
 									</div>
-									<p class="font-size-13 line-height-18" th:test="${game.desc}" >desc</p>
+									<p class="font-size-13 line-height-18" th:text="${game.desc}" >desc</p>
 								</div>
 							</div>
 						</div>
