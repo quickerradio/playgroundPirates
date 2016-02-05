@@ -148,5 +148,9 @@ public class Game {
     public String getDesc() {
         return desc;
     }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
 }
 
