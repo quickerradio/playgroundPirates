@@ -167,7 +167,7 @@
 				
 					<div class="item" th:each="event, iterstat : ${events}" th:classAppend="${iterstat.first}? ' active'" >
 						<!-- need to update with the correct file name.  -->
-						<img src="holder.js/1920x630" class="full-width" alt=""/>
+						<img src="http://placekitten.com/1920/630" class="full-width" alt=""/>
 						<div class="carousel-caption" style="align:middle; padding:0px 20%; width:100%">
 							<h1 data-animation="animated animate1 fadeInDown" th:text="${event.name}"></h1>
 							<p style="font-size:150%" data-animation="animated animate7 fadeIn" th:text="${event.desc} "></p>
@@ -263,15 +263,15 @@
 						
 						<!-- BEGIN ACTIVE PLAYERS LISTING. DO NOT EDIT -->
 						<div class="widget">
-							<div class="title">Active Players</div>
-							<ul class="game-list">
+<!-- 							<div class="title">Active Players</div> -->	
+
+						<ul class="game-list">
 								<!-- BEGIN THYME REPEAT -->
-								<li style="background-image: url(img/cover/cover.jpg);">
+								<li style="background-image: url(img/cover/cover.jpg);" th:each="player : ${activePlayers}" >
 									<a href="#" class="overlay">
-										<span class="number">1</span>
 										<div class="game-meta">
-											<h4 class="game-title">The Witcher 3: Wild Hunt</h4>
-											<span>Nov 17, 2015</span>
+											<h4 class="game-title" th:text="${activePlayers.handle}">The Witcher 3: Wild Hunt</h4>
+											<span><a href="">Message</a></span>
 										</div>
 									</a>f
 								</li>
