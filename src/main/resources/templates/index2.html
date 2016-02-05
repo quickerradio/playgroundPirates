@@ -122,7 +122,7 @@
 					<a href="#" id="nav-profile" class="profile dropdown-toggle" data-toggle="dropdown"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /> <span>TCC Student</span></a>
 					<ul class="dropdown-menu" aria-labelledby="nav-profile">
 						<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-						<li><a href="#"><i class="fa fa-heart"></i> Likes <span class="label label-info pull-right">32</span></a></li>
+						<li><a href="#"><i class="fa fa-heart"></i> Signup <span class="label label-info pull-right">32</span></a></li>
 						<li><a href="#"><i class="fa fa-gamepad"></i> Games</a></li>
 						<li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
 						<li class="divider"></li>
@@ -161,21 +161,21 @@
 	<div id="wrapper" >	
 		
 		
-<!-- BEGIN SLIDER PHOTO -->
-<div id="full-carousel" class="carousel slide full-carousel carousel-fade" data-ride="carousel">
-			<div class="carousel-inner" role="listbox"  >
-			
-				<div class="item" th:each="event, iterstat : ${events}" th:classAppend="${iterstat.first}? ' active'" >
-					<!-- need to update with the correct file name.  -->
-					<img src="holder.js/1920x630" class="full-width" alt=""/>
-					<div class="carousel-caption" >
-						<h1 data-animation="animated animate1 fadeInDown" th:text="${event.name}"></h1>
-						<p data-animation="animated animate7 fadeIn" th:text="${event.desc} "></p>
-						
-						<p data-animation="animated animate7 fadeIn" th:text="${#temporals.format(event.start, 'MMM dd hh:mm a')}"></p>
-						<a href="#signin" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded text-uppercase" data-animation="animated animate10 fadeIn">Became a member now</a>
+	<!-- BEGIN SLIDER PHOTO -->
+	<div id="full-carousel" class="carousel slide full-carousel carousel-fade" data-ride="carousel">
+				<div class="carousel-inner" role="listbox"  >
+				
+					<div class="item" th:each="event, iterstat : ${events}" th:classAppend="${iterstat.first}? ' active'" >
+						<!-- need to update with the correct file name.  -->
+						<img src="holder.js/1920x630" class="full-width" alt=""/>
+						<div class="carousel-caption" style="align:middle; padding:0px 20%; width:100%">
+							<h1 data-animation="animated animate1 fadeInDown" th:text="${event.name}"></h1>
+							<p style="font-size:150%" data-animation="animated animate7 fadeIn" th:text="${event.desc} "></p>
+							
+							<p style="font-size:200%" data-animation="animated animate7 fadeIn" th:text="${#temporals.format(event.start, 'MMM dd hh:mm a')}"></p><br/>
+							<a href="#signin" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded text-uppercase" data-animation="animated animate10 fadeIn">Become a member now</a>
+						</div>
 					</div>
-				</div>
 					<a class="left carousel-control" href="#full-carousel" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
@@ -184,17 +184,9 @@
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
-			</div>	
-				
-							
-				
-			
-		</div>
-
-
-
-
-<!-- END SLIDER PHOTO -->
+				</div>
+			</div>
+		<!-- END SLIDER PHOTO -->
 			
 				
 		<!-- BEGIN OTHER EVENTS -->
@@ -226,10 +218,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 border-right-1 border-grey-200 no-border-sm">
+						
+						<!-- BEGIN TOP GAMES HEADER -->
 						<div class="page-header margin-bottom-30 no-margin-bottom-xs height-35">
 							<h4 class="pull-left">Top Games</h4>
-							
 							<div class="pull-right dropdown hidden-xs text-initial"> 
+								
 								sort by: 
 								<a href="#" id="orderby" class="btn btn-xs btn-default margin-left-5 padding-right-10 padding-left-10 dropdown-toggle text-initial" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">category <i class="fa fa-angle-down no-margin-right"></i></a>
 								<ul class="dropdown-menu" aria-labelledby="orderby">
@@ -238,9 +232,13 @@
 									<li><a href="#" class="text-initial">Popularity</a></li>
 									
 								</ul>
+								<!-- END SORT BY -->
 							</div>
 						</div>
-						-------------------------------------------------------
+						<!-- END TOP GAMES HEADER -->
+						
+						
+						<!-- top games list pulling from the database DO NOT ALTER -->
 						<div class="post post-md" th:each="game : ${topGames}">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
@@ -250,177 +248,24 @@
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
 									<div class="post-header">
 										<div class="post-title">
-<<<<<<< HEAD
 											<h3 class="font-size-20" th:text="${game.name}">TITLE</h3>
-=======
-											<h3 class="font-size-20"><a href="blog-post.html">Battlefield 4: All Out War in the Playground!</a></h3>
->>>>>>> origin/master
 										</div>
 									</div>
-									
-									<p class="font-size-13 line-height-18">Massive multiplayer all out giant sandboxed, digital warfare, on the console of your choice, right here in the <strong>TCC Playground</strong>!</p>
-								
-									<ul class="post-meta">
-										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
-										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="divider"></div>
-						</div>
-						
-						-----------------------------------------------------------
-							
-<<<<<<< HEAD
-=======
-								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
-									<div class="post-header">
-										<div class="post-title">
-											<h3 class="font-size-20"><a href="blog-post.html">Star Wars: Battlefront, "May The Force Be With You" in The Playground!</a></h3>
-										</div>
-									</div>
-									
-									<p class="font-size-13 line-height-18">The Force Awakens in The Playground!  Crush Rebel scum or fight the Imperial forces as a part of the Rebel Alliance!</p>
-								
-									<ul class="post-meta">
-										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
-										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="divider"></div>
-						</div>
->>>>>>> origin/master
-						
-						
-						<div class="post post-md">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt="" /></a>
-								</div>
-							
-								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
-									<div class="post-header">
-										<div class="post-title">
-											<h3 class="font-size-20"><a href="blog-post.html">Fallout 4, kill time between class in this epic RPG!</a></h3>
-										</div>
-									</div>
-									
-									<p class="font-size-13 line-height-18">It's you and your dog trying to surive!</p>
-								
-									<ul class="post-meta">
-										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
-										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="divider"></div>
-						</div>
-						
-						
-						<div class="post post-md">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt="" /></a>
-								</div>
-							
-								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
-									<div class="post-header">
-										<div class="post-title">
-											<h3 class="font-size-20"><a href="blog-post.html">World Of Warcraft goes on the livescreen!</a></h3>
-										</div>
-									</div>
-									
-									<p class="font-size-13 line-height-18">Will WOW be faithful to its roots?</p>
-								
-									<ul class="post-meta">
-										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
-										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="divider"></div>
-						</div>
-						
-						
-						<div class="post post-md">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
-									<a href="#"><img src="holder.js/240x160" alt="" /></a>
-								</div>
-								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
-									<div class="post-header">
-										<div class="post-title">
-											<h3 class="font-size-20"><a href="blog-post.html">Call Of Duty Black Ops III AKA COD meets cyborgs!
-										</div>
-									</div>
-									
-									<p class="font-size-13 line-height-18">It's the future of COD with cybernetic enhancements!</p>
-								
-									<ul class="post-meta">
-										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
-										<li><i class="fa fa-calendar margin-right-5"></i> Dec 18, 2015</li>
-										<li><i class="fa fa-comments margin-right-5"></i> <a href="blog-post.html">0 <span class="hidden-xs">Comments</span></a></li>
-									</ul>
+									<p class="font-size-13 line-height-18" th:text="${game.desc}" >desc</p>
 								</div>
 							</div>
 						</div>
-						
-						<div class="text-center"><a href="#" class="btn btn-primary btn-rounded btn-shadow margin-top-10">Load more</a></div>
-						<h4 class="page-header margin-bottom-30 margin-top-40">Top News</h4>
-						<div class="row">
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 no-padding-xs no-padding-sm">
-								<div class="entry-post list">
-									<div class="thumb">
-										<img src="holder.js/240x130" alt="" />
-										<div class="thumb-info"><span class="label label-primary">PS4</span></div>
-										<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>33</span></a></div>
-									</div>
-									<div class="caption">
-										<h3 class="main-title"><a href="#">Fallout 4 Live Stream</a></h3>
-										<div class="font-size-12 margin-top-10 hidden-xs">Want tips on beating Fallout 4 or want to watch a pro play it? Stop by The Playground and check it out!</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 no-padding-xs no-padding-sm">
-								<div class="entry-post list">
-									<div class="thumb">
-										<img src="holder.js/240x130" alt="" />
-										<div class="thumb-info"><span class="label label-warning">PC</span></div>
-										<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>20</span></a></div>
-									</div>
-									<div class="caption">
-										<h3 class="main-title"><a href="#">Super Smash Brothers Tournament!</a></h3>
-										<div class="font-size-12 margin-top-10 hidden-xs">Mario VS Luigi VS Pikachu VS Samus and more, it's the ultimate Nintendo mashup!</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 no-padding-xs no-padding-sm">
-								<div class="entry-post list">
-									<div class="thumb">
-										<img src="holder.js/240x130" alt="" />
-										<div class="thumb-info"><span class="label label-success">Xbox</span></div>
-										<div class="thumb-nav"><a href="#"><i class="fa fa-comments"></i> <span>41</span></a></div>
-									</div>
-									<div class="caption">
-										<h3 class="main-title"><a href="#">Mirror's Edge 2 Speed Run</a></h3>
-										<div class="font-size-12 margin-top-10 hidden-xs">Mirror's Edge 3 is on the way, get some practice by playing the 2nd game!</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<!-- end of DO NOT ALTER -->
 					</div>
 					
+					<!-- BEGIN SIGN IN INFORMATION -->
 					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 margin-top-sm-15">
-						<a href="#signin" data-toggle="modal" class="btn btn-block btn-primary margin-bottom-30 padding-10">Sign in to The Playground</a>
 						
+						<!-- BEGIN ACTIVE PLAYERS LISTING. DO NOT EDIT -->
 						<div class="widget">
-							<div class="title">Recent Players</div>
+							<div class="title">Active Players</div>
 							<ul class="game-list">
+								<!-- BEGIN THYME REPEAT -->
 								<li style="background-image: url(img/cover/cover.jpg);">
 									<a href="#" class="overlay">
 										<span class="number">1</span>
@@ -430,87 +275,16 @@
 										</div>
 									</a>f
 								</li>
-								<li style="background-image: url(img/cover/cover.jpg);">
-									<a href="#" class="overlay">
-										<span class="number">2</span>
-										<div class="game-meta">
-											<h4 class="game-title">Uncharted 4: A Thief's End</h4>
-											<span>Nov 17, 2015</span>
-										</div>
-									</a>
-								</li>
-								<li style="background-image: url(img/cover/cover.jpg);">
-									<a href="#" class="overlay">
-										<span class="number">3</span>
-										<div class="game-meta">
-											<h4 class="game-title">Last of Us: Remastered</h4>
-											<span>Nov 17, 2015</span>
-										</div>
-									</a>
-								</li>
-								<li style="background-image: url(img/cover/cover.jpg);">
-									<a href="#" class="overlay">
-										<span class="number">4</span>
-										<div class="game-meta">
-											<h4 class="game-title">Grand Theft Auto 5</h4>
-											<span>Nov 17, 2015</span>
-										</div>
-									</a>
-								</li>
-								<li style="background-image: url(img/cover/cover.jpg);">
-									<a href="#" class="overlay">
-										<span class="number">5</span>
-										<div class="game-meta">
-											<h4 class="game-title">Assassin's Creed: Syndicate</h4>
-											<span>Nov 17, 2015</span>
-										</div>
-									</a>
-								</li>
+								<!-- END THYME REPEAT -->
+
 							</ul>
 						</div>
+						<!-- END ACTIVE PLAYERS LISTING -->
 						
-						<div class="widget">
-							<div class="title">Recent Players</div>
-							<div class="widget-list player">
-								<ul>
-									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
-										<div class="widget-list-meta">
-											<h4 class="widget-list-title"><a href="#">Dennis A.</a></h4>
-											<p><i class="fa fa-clock-o margin-right-5"></i>February 04, 2016</p>
-										</div>
-									</li>
-									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
-										<div class="widget-list-meta">
-											<h4 class="widget-list-title"><a href="#">Josh B.</a></h4>
-											<p><i class="fa fa-clock-o margin-right-5"></i>February 03, 2016</p>
-										</div>
-									</li>
-									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
-										<div class="widget-list-meta">
-											<h4 class="widget-list-title"><a href="#">Bob C.</a></h4>
-											<p><i class="fa fa-clock-o margin-right-5"></i>February 03, 2016</p>
-										</div>
-									</li>
-									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="Nathan Drake"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
-										<div class="widget-list-meta">
-											<h4 class="widget-list-title"><a href="#">Larry D.</a></h4>
-											<p><i class="fa fa-clock-o margin-right-5"></i>February 03, 2016</p>
-										</div>
-									</li>
-									<li>
-										<a href="#" class="thumb" data-toggle="tooltip" title="YAKUZI"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /></a>
-										<div class="widget-list-meta">
-											<h4 class="widget-list-title"><a href="#">Chuck E.</a></h4>
-											<p><i class="fa fa-clock-o margin-right-5"></i>February 02, 2016</p>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
+						
+						
+						
+						
 						<div class="widget">
 							<div class="title">Recent Posts</div>
 							<div class="widget-list">
@@ -557,7 +331,7 @@
 				</div>
 			</div>
 		</section>
-	</div>
+</div>
 	
 	<!-- footer -->
 	<footer>

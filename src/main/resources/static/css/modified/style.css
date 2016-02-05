@@ -5,12 +5,12 @@
 1. General
 ========================================================================== */
 body {
-	background: #FFF; 
+	background: #666D70; 
 	font-size: 13px;
 	font-family: "Open Sans", sans-serif;
 }
 a {
-	color: #313131;
+	color: #A3AF07;
 	-webkit-transition: 0.25s;
 	transition: 0.25s;
 }
@@ -61,11 +61,11 @@ pre {
 	color: #313131;
 }
 .btn.btn-link:hover {
-	color: #2776dc;
+	color: #004F6D;
 	text-decoration: none;
 }
 .btn.btn-primary {
-	background-color: #2776dc;
+	background-color: #004F6D;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:active,
@@ -463,7 +463,7 @@ img {
 	
 /* --- p --- */
 p {
-	color: rgba(0,0,0, 0.6);
+	color: #FFFFFF;
 	margin: 0 0 10px 0;
 	line-height: 22px;
 	font-size: 14px;
@@ -781,8 +781,8 @@ p {
 	padding-top: 15px;
 }
 .form-inverse.form-control {
-	background: #1b1b1b !important;
-	color: #7e7e7e !important;
+	background: #004F6D !important;
+	color: #FFFFFF !important;
 }
 .form-control {	
 	background: #fbfbfb;
@@ -1277,7 +1277,7 @@ nav ul li .dropdown-menu > li i,
 header {
 	width: 100%;
 	height: 55px;
-	background: #141619;
+	background: #004F6D;
 	position: relative;
 	z-index: 999;
 }
@@ -1289,7 +1289,7 @@ header .logo {
 }
 header .container {
 	position: relative;
-	background: #141619;
+	background: #004F6D;
 }
 header ul {
 	list-style-type: none;
@@ -1299,9 +1299,9 @@ header ul {
 header ul li a {
 	line-height: 55px;
 	padding: 0 12px;
-	color: #939393;
-	font-size: 15px;
-	font-family: "Roboto", sans-serif;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: "Trade Gothic Bold Condensed 20", sans-serif;
 	font-weight: 500;
 	display: inline-block;
 }
@@ -1827,7 +1827,7 @@ section .game-title .page-header {
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-color: #000;
+	background-color: #99CCFF;
 	position: relative;
 }
 .news-block a.link {
@@ -1889,10 +1889,10 @@ section .game-title .page-header {
 .widget .title {
 	padding: 5px 0 5px 20px;
 	border: 0;
-	font-size: 14px;
+	font-size: 18px;
 	text-align: left;
 	margin: 0 0 25px 0;
-	font-weight: 700;
+	font-weight: bold;
 	text-transform: uppercase;
 	color: rgba(39, 39, 39, 0.8);
 	border-left: 5px solid #2776dc;
@@ -2014,18 +2014,22 @@ section .game-title .page-header {
 	height: 100%;
 	position: relative;
 	padding: 0 20px;
-	background: -moz-linear-gradient(left,  rgba(0,0,0,0.89) 0%, rgba(0,0,0,0.89) 21%, rgba(0,0,0,0.23) 99%, rgba(0,0,0,0.23) 100%);
-	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.89) 0%,rgba(0,0,0,0.89) 21%,rgba(0,0,0,0.23) 99%,rgba(0,0,0,0.23) 100%);
-	background: linear-gradient(to right,  rgba(0,0,0,0.89) 0%,rgba(0,0,0,0.89) 21%,rgba(0,0,0,0.23) 99%,rgba(0,0,0,0.23) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3000000', endColorstr='#3b000000',GradientType=1 );
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#99ccff+0,99ccff+21,99ccff+99,7db9e8+100&0.89+1,0.89+21,0.23+99,0.23+100 */
+background: -moz-linear-gradient(left,  rgba(153,204,255,0.89) 0%, rgba(153,204,255,0.89) 1%, rgba(0, 79, 109, 1.0) 21%, rgba(153,204,255,0.23) 99%, rgba(125,185,232,0.23) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(153,204,255,0.89) 0%,rgba(153,204,255,0.89) 1%,rgba(0, 79, 109, 1.0) 21%,rgba(153,204,255,0.23) 99%,rgba(125,185,232,0.23) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(153,204,255,0.89) 0%,rgba(153,204,255,0.89) 1%,rgba(0, 79, 109, 1.0) 21%,rgba(153,204,255,0.23) 99%,rgba(125,185,232,0.23) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e399ccff', endColorstr='#3b7db9e8',GradientType=1 ); /* IE6-9 */
+
 	-webkit-transition: background 0.25s linear;
 	transition: background 0.25s linear;
 }
 .game-list li .overlay:hover {
-	background: -moz-linear-gradient(left,  rgba(0,0,0,0.49) 0%, rgba(0,0,0,0.49) 21%, rgba(0,0,0,0.23) 99%, rgba(0,0,0,0.23) 100%);
-	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.49) 0%,rgba(0,0,0,0.49) 21%,rgba(0,0,0,0.23) 99%,rgba(0,0,0,0.23) 100%);
-	background: linear-gradient(to right,  rgba(0,0,0,0.49) 0%,rgba(0,0,0,0.49) 21%,rgba(0,0,0,0.23) 99%,rgba(0,0,0,0.23) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d000000', endColorstr='#3b000000',GradientType=1 );
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a3af07+0,a3af07+22,a3af07+99,a3af07+100&0.89+1,0.89+21,0.23+99,0.23+100 */
+background: -moz-linear-gradient(left,  rgba(163,175,7,0.89) 0%, rgba(163,175,7,0.89) 1%, rgba(163,175,7,0.89) 21%, rgba(163,175,7,0.88) 22%, rgba(163,175,7,0.23) 99%, rgba(163,175,7,0.23) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(163,175,7,0.89) 0%,rgba(163,175,7,0.89) 1%,rgba(163,175,7,0.89) 21%,rgba(163,175,7,0.88) 22%,rgba(163,175,7,0.23) 99%,rgba(163,175,7,0.23) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(163,175,7,0.89) 0%,rgba(163,175,7,0.89) 1%,rgba(163,175,7,0.89) 21%,rgba(163,175,7,0.88) 22%,rgba(163,175,7,0.23) 99%,rgba(163,175,7,0.23) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3a3af07', endColorstr='#3ba3af07',GradientType=1 ); /* IE6-9 */
+
 }
 .game-list li .game-title {
 	color: #FFF;
@@ -2272,7 +2276,7 @@ section .main-title {
 	padding-bottom: 0px;
 	padding-top: 0;
 	left: 0;
-	width: 100%;
+	width: 60%;
 	bottom: 0;
 	margin: 0;
 }
@@ -2585,7 +2589,7 @@ img.thumbnail.pull-left {
 5. Footer
  ========================================================================== */
 footer {
-	background: #232428;
+	background: #666D70;
 	width: 100%;
 	padding: 50px 0 0 0;
 	text-align: center;
@@ -2593,7 +2597,7 @@ footer {
 	position: relative;
 }
 footer p {
-	color: rgba(255,255,255, 0.3);
+	color: rgba(255,255,255, 1.0);
 	line-height: 20px;
 }
 footer a, footer a:hover {
@@ -2648,7 +2652,8 @@ footer .widget  {
 	text-align: left;
 }
 footer .widget .title {
-	font-size: 18px;
+	font-size: 22px;
+	font-weight: 900;
 	padding: 5px 0 10px 0;
 	color: #FFF;
 	text-align: left;
