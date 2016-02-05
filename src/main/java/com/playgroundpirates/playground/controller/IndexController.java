@@ -16,10 +16,13 @@ public class IndexController {
 	@Autowired
 	EventRepo eventRepo;
 	
+	GameRepo gameRepo;
+	
 	@RequestMapping("/")
 	public String serverHomepage(Model model) {
 		Collection<Event> events = eventRepo.getUpcomingGame();
-		Collection<Event> otherEvents = eventRepo.getOtherEvent();
+		Collection<Event> otherEvents = eventRepo.getOtherEvent(); 
+		//Collection<Game> topGames = gameRepo.
 		
 		model.addAttribute("events", events);
 		model.addAttribute("otherEvents", otherEvents);
