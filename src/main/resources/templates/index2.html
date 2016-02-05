@@ -122,7 +122,7 @@
 					<a href="#" id="nav-profile" class="profile dropdown-toggle" data-toggle="dropdown"><img th:src="@{/img/user/avatar.jpg}" src="../static/img/user/avatar.jpg" alt="" /> <span>TCC Student</span></a>
 					<ul class="dropdown-menu" aria-labelledby="nav-profile">
 						<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-						<li><a href="#"><i class="fa fa-heart"></i> Likes <span class="label label-info pull-right">32</span></a></li>
+						<li><a href="#"><i class="fa fa-heart"></i> Signup <span class="label label-info pull-right">32</span></a></li>
 						<li><a href="#"><i class="fa fa-gamepad"></i> Games</a></li>
 						<li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
 						<li class="divider"></li>
@@ -240,7 +240,7 @@
 								</ul>
 							</div>
 						</div>
-						-------------------------------------------------------
+						
 						<div class="post post-md" th:each="game : ${topGames}">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding-xs no-padding-sm margin-bottom-xs-15 margin-bottom-sm-15">
@@ -250,15 +250,11 @@
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
 									<div class="post-header">
 										<div class="post-title">
-<<<<<<< HEAD
 											<h3 class="font-size-20" th:text="${game.name}">TITLE</h3>
-=======
-											<h3 class="font-size-20"><a href="blog-post.html">Battlefield 4: All Out War in the Playground!</a></h3>
->>>>>>> origin/master
 										</div>
 									</div>
 									
-									<p class="font-size-13 line-height-18">Massive multiplayer all out giant sandboxed, digital warfare, on the console of your choice, right here in the <strong>TCC Playground</strong>!</p>
+									<p class="font-size-13 line-height-18" th:test="${game.desc}" >desc</p>
 								
 									<ul class="post-meta">
 										<li><i class="fa fa-user margin-right-5"></i> <a href="#">YAKUZI</a></li>
@@ -270,10 +266,8 @@
 							<div class="divider"></div>
 						</div>
 						
-						-----------------------------------------------------------
+						
 							
-<<<<<<< HEAD
-=======
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
 									<div class="post-header">
 										<div class="post-title">
@@ -292,7 +286,7 @@
 							</div>
 							<div class="divider"></div>
 						</div>
->>>>>>> origin/master
+<!-->>>>>>> origin/master -->
 						
 						
 						<div class="post post-md">
@@ -355,7 +349,7 @@
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 no-padding-xs no-padding-sm">
 									<div class="post-header">
 										<div class="post-title">
-											<h3 class="font-size-20"><a href="blog-post.html">Call Of Duty Black Ops III AKA COD meets cyborgs!
+											<h3 class="font-size-20"><a href="blog-post.html">Call Of Duty Black Ops III AKA COD meets cyborgs!</a></h3>
 										</div>
 									</div>
 									
@@ -554,10 +548,11 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+	
+			
 		</section>
 	</div>
+	
 	
 	<!-- footer -->
 	<footer>
