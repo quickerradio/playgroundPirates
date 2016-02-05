@@ -36,7 +36,6 @@ public class GameRepo {
                     Game.Builder builder = new Game.Builder();
                     builder.withName(rs.getString("GAME_NAME"));
                     builder.withCategory(rs.getString("GAME_CATEGORY"));
-                    builder.withMaker(rs.getString("GAME_MAKER"));
                     Clob clob = rs.getClob("GAME_DESC");
                     builder.withMaxPlayers(rs.getInt("GAME_MAXPLAYER"));
                     builder.withDesc(clob.getSubString(1, (int) clob.length()));
