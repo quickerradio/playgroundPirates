@@ -16,10 +16,9 @@ import java.util.Collection;
 import java.util.List;
 
 import com.playgroundpirates.playground.Game;
+import org.springframework.stereotype.Repository;
 
-/**
- * Created by hackathon on 2/4/2016.
- */
+@Repository
 public class GameRepo {
 
     JdbcTemplate template;
